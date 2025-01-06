@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bijay Sapkota | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,9 +15,9 @@
         }
 
         header {
-            background: #333;
+            background: linear-gradient(90deg, #333, #444);
             color: #fff;
-            padding: 10px 20px;
+            padding: 20px;
             text-align: center;
         }
 
@@ -23,7 +25,7 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            background: #444;
+            background: #555;
             padding: 10px 0;
         }
 
@@ -31,6 +33,11 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700;
         }
 
         .container {
@@ -38,7 +45,7 @@
         }
 
         section {
-            margin: 20px 0;
+            margin: 40px 0;
         }
 
         h1, h2 {
@@ -46,16 +53,15 @@
             color: #333;
         }
 
-        .project {
+        .card {
             margin-bottom: 15px;
         }
 
         footer {
-            background: #333;
+            background: linear-gradient(90deg, #333, #444);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: relative;
+            padding: 20px 0;
         }
 
         .social-links {
@@ -68,6 +74,11 @@
         .social-links a {
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #FFD700;
         }
     </style>
 </head>
@@ -78,10 +89,19 @@
         <p>Student | Programmer | Machine Learning Enthusiast</p>
     </header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#writing">Writing</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#sports">Sports</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#portfolio">Portfolio Links</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#certifications">Certifications</a>
     </nav>
     <div class="container">
         <section id="about">
@@ -89,54 +109,96 @@
             <p>Hello! I am Bijay Sapkota, a Computer Engineering student specializing in Machine Learning. Proficient in C, C++, Python, and experienced in developing innovative solutions like MediSync and Artifynance.</p>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
+        <section id="education">
+            <h2>Education</h2>
             <ul>
-                <li><strong>Marketing Lead</strong> at KU Hackfest (Jul 2023 - Nov 2023)</li>
-                <li><strong>Researcher and Writer</strong> at The Nepali Comment (Sep 2023 - May 2024)</li>
-                <li><strong>Data Engineer Intern</strong> at Maalexi Inc. (May 2024 - Sep 2024)</li>
+                <li>Bachelor in Computer Engineering, Kathmandu University</li>
+                <li>High School: XYZ Academy</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: C, C++, Python</li>
+                <li>Machine Learning, Deep Learning</li>
+                <li>Data Analysis, Visualization</li>
             </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <strong>Office Management System:</strong> <a href="https://github.com/bijayy11/Office_Management_System.git" target="_blank">GitHub Repo</a>
-            </div>
-            <div class="project">
-                <strong>Perfect Hours:</strong> <a href="https://github.com/bijayy11/perfect_hours.git" target="_blank">GitHub Repo</a>
-            </div>
-            <div class="project">
-                <strong>Football Player Recommendation System:</strong> <a href="https://github.com/bijayy11/Player_Recommendation.git" target="_blank">GitHub Repo</a>
-            </div>
-            <div class="project">
-                <strong>Artifynace:</strong> <a href="https://github.com/bijayy11/ArtiFynance.git" target="_blank">GitHub Repo</a>
-            </div>
-            <div class="project">
-                <strong>MediSync:</strong> <a href="https://github.com/bijayy11" target="_blank">GitHub Repo</a>
-            </div>
-            <div class="project">
-                <strong>Embedded Image Watermarking:</strong> <a href="https://github.com/bijayy11/Image-Watermarking-using-DFT-and-FFT.git" target="_blank">GitHub Repo</a>
-            </div>
-            <div class="project">
-                <strong>Decent:</strong> <a href="https://github.com/bijayy11/decent-forked.git" target="_blank">GitHub Repo</a>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Office Management System</h5>
+                            <a href="https://github.com/bijayy11/Office_Management_System.git" target="_blank" class="btn btn-primary">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards here -->
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:sap.bijayy@gmail.com">sap.bijayy@gmail.com</a></p>
+        <section id="research">
+            <h2>Research</h2>
+            <p>Details about research papers and publications.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>Marketing Lead at KU Hackfest</li>
+                <!-- Add more experiences here -->
+            </ul>
+        </section>
+
+        <section id="writing">
+            <h2>Writing</h2>
+            <p>Links to blogs, articles, or publications.</p>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <p>Details of awards and recognitions.</p>
+        </section>
+
+        <section id="sports">
+            <h2>Sports</h2>
+            <p>Favorite sports and achievements in sports.</p>
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>Details about your hobbies and interests.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio Links</h2>
             <div class="social-links">
-                <a href="https://github.com/bijayy11" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/bjsapkota" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/sap.bijayy" target="_blank">Twitter</a>
+                <a href="https://github.com/bijayy11" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/bjsapkota" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://twitter.com/sap.bijayy" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
             </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>Feedback from peers or mentors.</p>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <p>Details about relevant certifications.</p>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2025 Bijay Sapkota. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
