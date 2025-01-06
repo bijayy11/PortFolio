@@ -7,11 +7,14 @@
     <title>Bijay Sapkota | Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
 
         header {
@@ -19,6 +22,10 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+        }
+
+        header p span {
+            color: #FFD700;
         }
 
         nav {
@@ -53,10 +60,6 @@
             color: #333;
         }
 
-        .card {
-            margin-bottom: 15px;
-        }
-
         footer {
             background: linear-gradient(90deg, #333, #444);
             color: #fff;
@@ -86,7 +89,7 @@
 <body>
     <header>
         <h1>Bijay Sapkota</h1>
-        <p>Student | Programmer | Machine Learning Enthusiast</p>
+        <p>Student | <span id="dynamic-text"></span></p>
     </header>
     <nav>
         <a href="#about">About Me</a>
@@ -104,12 +107,12 @@
         <a href="#certifications">Certifications</a>
     </nav>
     <div class="container">
-        <section id="about">
+        <section id="about" data-aos="fade-up">
             <h2>About Me</h2>
             <p>Hello! I am Bijay Sapkota, a Computer Engineering student specializing in Machine Learning. Proficient in C, C++, Python, and experienced in developing innovative solutions like MediSync and Artifynance.</p>
         </section>
 
-        <section id="education">
+        <section id="education" data-aos="fade-right">
             <h2>Education</h2>
             <ul>
                 <li>Bachelor in Computer Engineering, Kathmandu University</li>
@@ -117,7 +120,7 @@
             </ul>
         </section>
 
-        <section id="skills">
+        <section id="skills" data-aos="fade-left">
             <h2>Skills</h2>
             <ul>
                 <li>Programming Languages: C, C++, Python</li>
@@ -126,7 +129,7 @@
             </ul>
         </section>
 
-        <section id="projects">
+        <section id="projects" data-aos="zoom-in">
             <h2>Projects</h2>
             <div class="row">
                 <div class="col-md-6">
@@ -141,12 +144,12 @@
             </div>
         </section>
 
-        <section id="research">
+        <section id="research" data-aos="fade-up">
             <h2>Research</h2>
             <p>Details about research papers and publications.</p>
         </section>
 
-        <section id="experience">
+        <section id="experience" data-aos="fade-down">
             <h2>Experience</h2>
             <ul>
                 <li>Marketing Lead at KU Hackfest</li>
@@ -154,27 +157,27 @@
             </ul>
         </section>
 
-        <section id="writing">
+        <section id="writing" data-aos="fade-up">
             <h2>Writing</h2>
             <p>Links to blogs, articles, or publications.</p>
         </section>
 
-        <section id="achievements">
+        <section id="achievements" data-aos="fade-left">
             <h2>Achievements</h2>
             <p>Details of awards and recognitions.</p>
         </section>
 
-        <section id="sports">
+        <section id="sports" data-aos="fade-right">
             <h2>Sports</h2>
             <p>Favorite sports and achievements in sports.</p>
         </section>
 
-        <section id="hobbies">
+        <section id="hobbies" data-aos="zoom-in">
             <h2>Hobbies</h2>
             <p>Details about your hobbies and interests.</p>
         </section>
 
-        <section id="portfolio">
+        <section id="portfolio" data-aos="fade-up">
             <h2>Portfolio Links</h2>
             <div class="social-links">
                 <a href="https://github.com/bijayy11" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -183,12 +186,12 @@
             </div>
         </section>
 
-        <section id="testimonials">
+        <section id="testimonials" data-aos="fade-down">
             <h2>Testimonials</h2>
             <p>Feedback from peers or mentors.</p>
         </section>
 
-        <section id="certifications">
+        <section id="certifications" data-aos="fade-up">
             <h2>Certifications</h2>
             <p>Details about relevant certifications.</p>
         </section>
@@ -199,6 +202,16 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        new Typed("#dynamic-text", {
+            strings: ["Programmer", "Machine Learning Enthusiast", "Innovator"],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
 </body>
 
 </html>
