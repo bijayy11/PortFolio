@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 10% 15%;
+    --foreground: 222.2 84% 95%;
+    --nav-bar: 240 50% 30%;
+    --nav-text: 240 70% 90%;
+    --card: 220 10% 20%;
+    --card-foreground: 222.2 84% 95%;
+    --popover: 220 10% 20%;
+    --popover-foreground: 222.2 84% 95%;
+    --primary: 224 71% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 260 50% 50%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 10% 25%;
+    --muted-foreground: 215.4 16.3% 85%;
+    --accent: 210 40% 50%;
+    --accent-foreground: 222.2 47.4% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 222.2 84% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: hsl(var(--background));
+  }
+
+  /* Navbar Styles */
+  .nav-link {
+    @apply relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary;
+    color: hsl(var(--nav-text)); /* Bright text for nav links */
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-secondary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .active-link::after {
+    @apply w-full;
+  }
+
+  nav {
+    background: hsl(var(--nav-bar)); /* Navbar background */
+    @apply shadow-lg fixed top-0 w-full z-50 flex justify-between items-center py-4 px-6;
+  }
+
+  /* Card Animations */
+  .card {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl bg-card text-card-foreground p-4 rounded-lg;
+  }
+
+  /* Page Transitions */
+  .page-transition {
+    @apply transition-opacity duration-300;
+  }
+
+  .page-enter {
+    @apply opacity-0;
+  }
+
+  .page-enter-active {
+    @apply opacity-100;
+  }
+
+  /* Section Animations */
+  .section-enter {
+    animation: section-fade-up 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  @keyframes section-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Skill Bar Animation */
+  .skill-bar {
+    @apply relative h-2 bg-muted rounded-full overflow-hidden;
+  }
+
+  .skill-progress {
+    @apply absolute left-0 top-0 h-full bg-secondary;
+    animation: skill-progress 1.5s ease-out forwards;
+  }
+
+  @keyframes skill-progress {
+    from {
+      width: 0;
+    }
+    to {
+      width: var(--progress);
+    }
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-secondary/20;
+  }
+
+  /* Text Animations */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+    animation: text-shimmer 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes text-shimmer {
+    from {
+      background-position: 0% center;
+    }
+    to {
+      background-position: -200% center;
+    }
+  }
+
+  /* Button Animations */
+  .animated-button {
+    @apply relative overflow-hidden transition-all duration-300 
+           hover:shadow-lg hover:shadow-secondary/20
+           active:scale-95;
+  }
+
+  .animated-button::after {
+    content: '';
+    @apply absolute inset-0 bg-white/20 
+           transform scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .animated-button:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+}
+
+
+@keyframes skill-move {
+  from {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-skill-move {
+  animation: skill-move 1s ease-out;
+}
